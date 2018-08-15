@@ -27,6 +27,12 @@ Install necessary libraries using PIP
 pip install -r requirements.txt
 ```
 
+Add tables to database
+
+```
+python manage.py migrate
+```
+
 Run local web server
 
 ```
