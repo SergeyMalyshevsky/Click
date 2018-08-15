@@ -11,41 +11,41 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Python 3.x must be installed on your computer. If you haven't it, you can download Python 3 from [official site](https://www.python.org/downloads/)
+Python 3.x must be installed on your computer. If you haven't it, you can download Python 3 from [official site](https://www.python.org/downloads/).
 
 ### Installing
 
-Create new directory and clone project using Git
+Create new directory and clone project using Git:
 
 ```
 git clone https://github.com/SergeyMalyshevsky/Click.git
 ```
 
-Install necessary libraries using PIP
+Install necessary libraries using pip:
 
 ```
 pip install -r requirements.txt
 ```
 
-Add tables to database
+Add tables to database:
 
 ```
 python manage.py migrate
 ```
 
-Run local web server
+Run local web server:
 
 ```
 python manage.py runserver
 ```
 
-Open your browser and open address http://127.0.0.1:8000/
+Open your browser and open address http://127.0.0.1:8000/.
 
 ![Screenshot](screenshot.PNG)
 
 ## Running the tests
 
-For checking work of functions run tests
+For checking work of functions run tests:
 
 ```
 python manage.py test
@@ -65,5 +65,5 @@ See also the list of [contributors](https://github.com/Click/contributors) who p
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
