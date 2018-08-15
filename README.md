@@ -1,7 +1,9 @@
 # Click
 
-Click is service for convert long URL to short. It can help to solve problems with sending long URLs to other people.
-Moreover, it generate QR code and you can just save it and send to your friend.
+Click is a service for converting long URL to short. For example, you have reference http://www.example.com?text=long-long-long-long-long-long-url.
+Copy it URL to input field and click button. System generates short URL like http://127.0.0.1:8000/abc. Now you can send this reference to other people.
+And when they put this string to browser address bar, service redirects request to the original site.
+Moreover, service generates QR code and you can just save it and send to your friend.
 
 ## Getting Started
 
@@ -49,7 +51,7 @@ python manage.py test
 
 ## Author
 
-* **Sergey Malyshevsky** - *Click* - [Click](https://github.com/SergeyMalyshevsky)
+* **Sergey Malyshevsky** - [Click](https://github.com/SergeyMalyshevsky)
 
 See also the list of [contributors](https://github.com/Click/contributors) who participated in this project.
 
