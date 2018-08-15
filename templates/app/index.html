@@ -1,0 +1,64 @@
+{% extends "app/layout.html" %}
+{% block content %}
+
+<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Длинный длинный URL" name="url" value="{{ url }}"
+                       maxlength="256"/>
+                <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit">
+                        <i class="glyphicon glyphicon-scissors"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-sm-2"></div>
+</div>
+<br/>
+
+{% if url %}
+
+<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+        <p>Новая ссылка сохранена. Теперь вы можете скопировать и отправить адрес своим друзьям и знакомым.
+            Чтобы поместить его в буфер обмена используйте системную функцию копирования текста.
+            Посмотрите вниз. Это QR-код. Нажмите на него правой кнопкой, сохраните картинку и распечатайте на стену.
+            Ну или просто не обращайте внимания.</p>
+        {% if img %}
+        <div class="text-center">
+            <img src="{{ img }}"/>
+        </div>
+        {% endif %}
+    </div>
+    <div class="col-sm-2"></div>
+</div>
+<h3 class="text-center"><a href="{% url 'index' %}">Добавить еще одну ссылку</a></h3>
+
+{% else %}
+
+<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+        <p>Довольно часто при общении в интернете люди пересылают друг другу ссылки.
+            Иногда эти ссылки бывают длинными, иногда — очень длинными.
+            Но почти всегда — слишком длинными. Для того чтобы избавиться от этой проблемы, был разработан этот сервис.
+            Принцип работы с ним очень простой: вставляете ссылку в поле для ввода, нажимаете на кнопку с ножницами и
+            получаете короткий, совсем короткий URL.</p>
+    </div>
+    <div class="col-sm-2"></div>
+</div>
+<div class="row text-center">
+    <h3>
+        <a href="{% url 'api' %}">Для настоящих гиков: использование API</a>
+    </h3>
+</div>
+
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "app/layout.html" %}
+{% block content %}
+
+<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+        <p>У этого сервиса есть REST-образный интерфейс, позволяющий автоматизировать работу с ним.
+            Для того, чтобы воспользоваться им, достаточно передать переменную <strong>url</strong> в GET
+            запросе по адресу <strong>{{ site_url }}/--</strong>, например, так:</p>
+    </div>
+    <div class="col-sm-2"></div>
+</div>
+<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+        <pre class="brush: bash">
+        $ curl {{ site_url }}/--?url=http://yandex.ru
+        </pre>
+        <br/>
+
+        <p>или вот так:</p>
+        <pre class="brush: python">
+        >>> url = 'http://yandex.ru'
+        >>> import urllib<br/>
+        >>> fetcher = urllib2.urlopen('{{ site_url }}/--?url=' + url)
+        >>> fetcher.read()
+        '{{ site_url }}/A1b'
+        </pre>
+        <br/>
+
+        <p>или даже так:</p>
+        <pre class="brush: php">&lt;?=file_get_contents("{{ site_url }}/--?url=http://yandex.ru");?&gt;</pre>
+    </div>
+    <div class="col-sm-2"></div>
+</div>
+<h3 class="text-center"><a href="{% url 'index' %}">Вернуться к ручному добавлению ссылок</a></h3>
+
+{% endblock %}
