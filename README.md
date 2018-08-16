@@ -15,10 +15,16 @@ Python 3.x must be installed on your computer. If you haven't it, you can downlo
 
 ### Installing
 
-Create new directory and clone project using Git:
+Clone project using Git:
 
 ```
 git clone https://github.com/SergeyMalyshevsky/Click.git
+```
+
+Go to created directory:
+
+```
+cd Click
 ```
 
 Install necessary libraries using pip:
@@ -39,7 +45,7 @@ Run local web server:
 python manage.py runserver
 ```
 
-Open your browser and open address http://127.0.0.1:8000/.
+Open your browser and go to address http://127.0.0.1:8000/.
 
 ![Screenshot](screenshot.PNG)
 
@@ -66,4 +72,5 @@ See also the list of [contributors](https://github.com/Click/contributors) who p
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
 
