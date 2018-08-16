@@ -21,10 +21,10 @@ def generate_url(domain, long_url):
         short_url = ''.join(['http://', domain, '/', char_array])
         img = generate_qr_code(short_url, char_array)
     else:
-        new_url = long_url
+        short_url = long_url
         img = ""
 
-    return new_url, img
+    return short_url, img
 
 
 def generate_string(number):
