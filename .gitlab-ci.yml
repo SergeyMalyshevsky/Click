@@ -1,0 +1,24 @@
+stages:
+  - build
+  - test
+  - deploy
+
+build job:
+  script:
+    - pwd
+    - ls
+    - docker build -t click_service .
+  stage: build
+
+test job:
+  script:
+    - echo "running tests and coverage analysis..."
+  stage: test
+
+pack and deploy job:
+  script:
+    - echo "packing and pushing to nuget..."
+  stage: deploy
+  only:
+    - merge_request
+    - work
