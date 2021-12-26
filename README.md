@@ -13,36 +13,56 @@ These instructions will get you a copy of the project up and running on your loc
 
 Python 3.x must be installed on your computer. If you haven't it, you can download Python 3 from [official site](https://www.python.org/downloads/).
 
-### Installing
+### Install
 
-Clone project using Git:
+Clone project using Git
 
 ```
 git clone https://github.com/SergeyMalyshevsky/Click.git
 ```
 
-Go to created directory:
+Go to created directory
 
 ```
 cd Click
 ```
 
-Install necessary libraries using pip:
+Install necessary libraries using pip
 
 ```
 pip install -r requirements.txt
 ```
 
-Add tables to database:
+Add tables to database
 
 ```
 python manage.py migrate
 ```
 
-Run local web server:
+Run local web server
 
 ```
 python manage.py runserver
+```
+
+### Install via docker
+
+Clone project using Git
+
+```
+git clone https://github.com/SergeyMalyshevsky/Click.git
+```
+
+Build docker container
+
+```
+docker build -f Dockerfile -t click-service:local .
+```
+
+Run docker container
+
+```
+docker run -d -p 8000:8000 -d click-service:local
 ```
 
 Open your browser and go to address http://127.0.0.1:8000/.
