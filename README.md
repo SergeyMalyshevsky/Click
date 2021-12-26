@@ -65,6 +65,8 @@ Run docker container
 docker run -d -p 8000:8000 -d click-service:local
 ```
 
+### Check service
+
 Open your browser and go to address http://127.0.0.1:8000/.
 
 ![Screenshot](screenshot.PNG)
